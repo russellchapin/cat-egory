@@ -61,8 +61,14 @@ class App extends Component {
       localStorage.setItem(inputVal, JSON.stringify(newArray));
     }
 
-    document.querySelector("input").value = "";
+    //If saved category matches category displayed, then update with newest image
+    const categoryKey = this.state.currentCategoryKey;
 
+    if(inputVal === this.state.currentCategoryKey){
+      this.getCategoryImages(categoryKey);
+    }
+
+    document.querySelector("input").value = "";
 
     this.updateCategories();
 
