@@ -1,0 +1,27 @@
+body {
+  background-color: #eee;
+}
+
+img {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+}
+
+.img-container {
+  height: 40vw;
+  max-height: 500px;
+  min-height: 400px;
+}
+
+.image-cropper {
+  overflow: hidden;
+  max-height: 50vw;
+}
+
+/* BS Override */
+.input-group>.form-control:not(:last-child) {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
